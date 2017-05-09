@@ -1,6 +1,6 @@
 'use strict';
 
-var average_to_letter = require("../../../practices/superposition_operation/collection_operation/letter_mapping_2.js");
+var average_to_letter = require('../../../practices/superposition_operation/collection_operation/letter_mapping_2.js');
 
 describe('average_to_letter', function() {
 
@@ -11,5 +11,5 @@ describe('average_to_letter', function() {
     var result = average_to_letter(collection);
 
     expect(result).toEqual('f');
-  })
+  });
 });

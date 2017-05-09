@@ -1,6 +1,6 @@
 'use strict';
 
-var choose_no_repeat_number = require("../../practices/filter/choose_no_repeat_number.js");
+var choose_no_repeat_number = require('../../practices/filter/choose_no_repeat_number.js');
 
 describe('choose_no_repeat_number', function() {
 
@@ -11,5 +11,5 @@ describe('choose_no_repeat_number', function() {
     var result = choose_no_repeat_number(collection);
 
     expect(result).toEqual([1,2,3,4]);
-  })
+  });
 });

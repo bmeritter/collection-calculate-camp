@@ -18,7 +18,7 @@ const decrease = (number_a, number_b) => {
 
 
 function get_letter_interval(number_a, number_b) {
-  
+
   if (number_a <= number_b) {
     return increase(number_a, number_b);
   }

@@ -1,6 +1,6 @@
 'use strict';
 
-var even_to_letter = require("../../../practices/superposition_operation/collection_operation/letter_mapping_1.js");
+var even_to_letter = require('../../../practices/superposition_operation/collection_operation/letter_mapping_1.js');
 
 describe('even_to_letter', function() {
 
@@ -11,5 +11,5 @@ describe('even_to_letter', function() {
     var result = even_to_letter(collection);
 
     expect(result).toEqual(['b','d','f','h','j']);
-  })
+  });
 });

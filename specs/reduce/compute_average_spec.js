@@ -8,6 +8,6 @@ describe('compute_average', function () {
   it('计算给定数字集合元素的平均值', function () {
 
     var result = compute_average(collection);
-    expect(result).toEqual(104.5)
+    expect(result).toEqual(104.5);
   });
 });

@@ -23,5 +23,5 @@ describe('compute_median', function () {
 
     var result = compute_median(collection_c);
     expect(result).toEqual(8.5);
-  })
+  });
 });

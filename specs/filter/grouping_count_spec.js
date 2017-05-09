@@ -1,6 +1,6 @@
 'use strict';
 
-var grouping_count = require("../../practices/filter/grouping_count.js");
+var grouping_count = require('../../practices/filter/grouping_count.js');
 
 describe('grouping_count', function() {
 
@@ -10,5 +10,5 @@ describe('grouping_count', function() {
     var result = grouping_count(collection);
 
     expect(result).toEqual({'1':6, '2':3, '3':4, '4':2});
-  })
+  });
 });
