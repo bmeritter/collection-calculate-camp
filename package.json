@@ -1,8 +1,14 @@
 {
   "scripts": {
-    "test": "jasmine-node --verbose specs"
+    "test": "jasmine-node --verbose specs",
+    "eslint":"eslint practices/**/**"
   },
   "dependencies": {
+    "eslint": "^3.19.0",
     "jasmine-node": "1.14.5"
+  },
+  "devDependencies": {
+    "eslint": "^3.19.0",
+    "eslint-plugin-react": "^7.0.0"
   }
 }
