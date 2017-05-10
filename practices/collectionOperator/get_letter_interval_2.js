@@ -1,7 +1,17 @@
 'use strict';
 
-const increase = (number_a, number_b, rows, cols) => {
+const getLetters = () => {
+  let rows = [''], cols = [];
+  for (let i = 97; i < 123; ++i) {
+    rows.push(String.fromCharCode(i));
+    cols.push(String.fromCharCode(i));
+  }
+  return {cols, rows};
+};
+
+const increase = (number_a, number_b) => {
   let result = [];
+  let {cols, rows} = getLetters();
   for (let i = number_a - 1; i < number_b; ++i) {
     let row = parseInt(i / 26);
     let col = parseInt(i % 26);
@@ -10,8 +20,9 @@ const increase = (number_a, number_b, rows, cols) => {
   return result;
 };
 
-const decrease = (number_a, number_b, rows, cols) => {
+const decrease = (number_a, number_b) => {
   let result = [];
+  let {cols, rows} = getLetters();
   for (let i = number_a - 1; i > number_b - 2; --i) {
     let row = parseInt(i / 26);
     let col = parseInt(i % 26);
@@ -21,16 +32,12 @@ const decrease = (number_a, number_b, rows, cols) => {
 };
 
 function get_letter_interval_2(number_a, number_b) {
-  let rows = [''], cols = [];
-  for (let i = 97; i < 123; ++i) {
-    rows.push(String.fromCharCode(i));
-    cols.push(String.fromCharCode(i));
-  }
+
 
   if (number_a <= number_b) {
-    return increase(number_a, number_b, rows, cols);
+    return increase(number_a, number_b);
   }
-  return decrease(number_a, number_b, rows, cols);
+  return decrease(number_a, number_b);
 }
 
 module.exports = get_letter_interval_2;
