@@ -3,12 +3,13 @@ var single_element = function (collection) {
   collection = collection.filter((item, index) => (index + 1) % 2 === 0);
   let result = [];
   collection.forEach(item => {
-    if (result.indexOf(item) !== -1) {
-      result.splice(result.indexOf(item), 1);
+    let exit = result.find(r => r.key === item);
+    if (exit) {
+      exit.count++;
     } else {
-      result.push(item);
+      result.push({key: item, count: 1});
     }
   });
-  return result;
+  return result.filter(item => item.count === 1).map(item => item.key);
 };
 module.exports = single_element;
