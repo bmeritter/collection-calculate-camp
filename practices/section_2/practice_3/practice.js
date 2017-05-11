@@ -1,5 +1,42 @@
 function count_same_elements(collection) {
-  //在这里写入代码
+  let result = [];
+  collection.forEach(item => {
+    let tmp = item.split('-');
+    if (tmp.length !== 2) {
+      tmp = tmp[0].split(':');
+    }
+    if (tmp.length !== 2) {
+      let tmp1 = [];
+      tmp1.push(tmp[0].replace(/[^a-z]/g, ''));
+      tmp1.push(tmp[0].replace(/[^0-9]/g, ''));
+      tmp = tmp1;
+    }
+    console.log(tmp);
+
+    let exit = result.find(r => r.name === tmp[0]);
+    let summary = parseInt(tmp[1]) || 1;
+    if (exit) {
+      exit.summary += summary;
+    } else {
+
+      result.push({name: item[0], summary: summary});
+    }
+  });
+  return result;
+
 }
+
+var collection = [
+  'a', 'a', 'a',
+  'e', 'e', 'e', 'e', 'e', 'e', 'e',
+  'h', 'h', 'h', 'h', 'h', 'h', 'h[3]', 'h', 'h',
+  't', 't-2', 't', 't', 't', 't', 't', 't', 't[10]',
+  'f', 'f', 'f', 'f', 'f', 'f', 'f', 'f', 'f',
+  'c:8',
+  'g', 'g', 'g', 'g', 'g', 'g', 'g',
+  'b', 'b', 'b', 'b', 'b', 'b',
+  'd-5'
+];
+count_same_elements(collection);
 
 module.exports = count_same_elements;
